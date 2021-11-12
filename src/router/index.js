@@ -20,14 +20,14 @@ const router = new VueRouter({
   routes
 })
 
-// 路由守卫
-router.beforeEach((to, from, next) => {
-  // 如果用户访问的是登录页
-  if (to.path === 'login') return next()
-  // 获取token
-  const tokenstr = window.sessionStorage.getItem('token')
-  // 没有token，强制跳转登录页面
-  if (!tokenstr) return next('/login')
-  next()
-})
+// // 路由守卫
+// router.beforeEach((to, from, next) => {
+//   // 如果用户访问的是登录页
+//   if (to.path === 'login') return next()
+//   // 获取token
+//   const tokenstr = window.sessionStorage.getItem('token')
+//   // 没有token，强制跳转登录页面
+//   if (!tokenstr) return next('/login')
+//   next()
+// })
 export default router
